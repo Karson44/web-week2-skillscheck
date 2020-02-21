@@ -2,29 +2,44 @@
 
 // Create a variable called 'myName' with a value that is your name. 
 
-// Code here
+var myName = "Karson"
 
 //////////////////PROBLEM 2////////////////////
 
 // Create a variable called 'faveNum' with a value that is your favorite number. 
 
+const faveNum = 44
 //Code here
 
 //////////////////PROBLEM 3////////////////////
 
 // Create a variable called 'lovesCode' and assign it a value of true.
 
+var lovesCode = true
 //Code here
 
 //////////////////PROBLEM 4////////////////////
 
 // Create a function called 'sum' that takes in two parameters, 'num1' and 'num2'. The function should return the sum of the two parameters.
 
+function sum(num1, num2){
+return num1 + num2
+}
 //Code here
 
 //////////////////PROBLEM 5////////////////////
 
 // Create a function called 'lovesCodeChecker' that takes in a single parameter called 'x'. Check to see if 'x' is equal to true. If it is, return a true boolean. If 'x' does not equal true, return a false boolean.  
+
+var x = true;
+
+function lovesCodeChecker(x){
+	if(x != true){
+		return false
+	} else {
+		return true
+	}
+	}
 
 //Code here
 
@@ -32,12 +47,23 @@
 
 // Create a function called 'oddChecker' that takes in one parameter, 'num'. Your function should check to see if the parameter is even or odd. If the parameter is odd, return 'the number is odd'. If the number is even, return 'the number is even'.
 
+function oddChecker(num){
+	if(num % 2 !== 0){
+		return 'the number is odd'
+	} else{
+		return 'the number is even'
+	}
+
+}
 //Code here
 
 //////////////////PROBLEM 7////////////////////
 
 // Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. Have the function take the two parameters and return a string that says "NAMEPARAM loves LOVEPARAM" with the appropriate parameters in the string. e.g. "Joseph loves music"
 
+function iLove(name, love){
+	return name + ' loves ' + love
+}
 //Code Here
 
 //////////////////PROBLEM 8////////////////////
@@ -45,18 +71,22 @@
 // Create a copy of the faveColors array called 'colorCopy' using slice.
 const faveColors = ['red', 'green', 'black']
 
+const colorCopy = faveColors.slice();
 //Code Here
 
 //////////////////PROBLEM 9////////////////////
 
 // Add a fourth color to the end of the 'colorCopy' array using push.
 
+colorCopy.push('blue');
 //Code Here
 
 //////////////////PROBLEM 10////////////////////
 
 // Create a new array called 'middleNums' from the numbers array that will capture only the middle numbers (2, 3, 4).
-const numbers = [1, 2, 3, 4, 5]
+const numbers = [1, 2, 3, 4, 5];
+
+var middleNums = numbers.slice(1,4)
 
 //Code Here
 
@@ -64,17 +94,43 @@ const numbers = [1, 2, 3, 4, 5]
 
 // Create an object called 'me' that has the following keys: firstName, state, age, and greeter. The value of the firstName key should be your name as a string. The value of the property state should be your current state or providence of residence as a string. The value of age should be your age as a number. greeter should be a method that returns the string 'Hello! My name is NAMEVALUE and I live in STATEVALUE' with the corresponding values. 
 
+var me = {
+	firstName: 'Karson',
+	state: 'Utah',
+	age: 23,
+	greeter: function(){
+		return 'Hello! My name is ' + this.firstName + 'and I live in' + this.state
+	}
+}
+
 //Code Here
 
 //////////////////PROBLEM 12////////////////////
 
 // Create a function called 'bigOrSmall' that takes in one parameter, 'arr', which will be an array of numbers. Inside of the bigOrSmall function, create a new array called 'answers'. Then, loop over the passed in arr parameter, and check to see if the number in the array is GREATER than 100. If it is, push 'big' as a string to the answers array. If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. Return the answers array inside of the function.
 
+function bigOrSmall(arr){
+	var answers = []
+	for(var i = 0; i < arr.length; i++)
+	if(arr[i] < 100){
+		return answers.push('big')
+	} else if(arr[i] >= 100) {
+		return answers.push('small')
+	}
+}
 // Code here
 
 //////////////////PROBLEM 13////////////////////
 
 // Create a function called 'arrayReverser' that takes in one parameter, 'arr'. Inside of arrayReverser, create an empty array called 'reversed'. Using a for loop, loop over the passed in array IN REVERSE (this means your counter should decrement), and then add each item to the 'reversed' array variable you created. Finally, return the 'reversed' array variable. 
+
+function arrayReverser(arr){
+	var reversed = []
+	for(let i = 0; i < arr.length; i--)
+	if(arr[i]){
+		add(a)
+	}
+}
 
 //Code Here
 
@@ -88,6 +144,14 @@ const myNumbers = [3, 55, 788, 2, 1]
 
 // First, use .map to create a new array that doubles each number. Call the new array 'doubled'.
 
+var doubled = myNumbers.map(newArr)
+function newArr(arr) {
+    var doubled = [];
+    for (var i = 0; i < arr.length; i++) {
+        doubled.push(arr[i] * 2);
+    }
+    return doubled;
+}
 // Code Here
 
 //////////////////PROBLEM 15////////////////////
@@ -127,10 +191,19 @@ const people = [
 	{ name: 'Josh', friend: true, awesomeLevel: 7 }
 ]
 
+let enemies = []
+let arr = people.filter((element, index, array)=>{
+	if(people.friend !== true){
+	return element.push(enemies)
+	}
+})
+
 // Code Here
 
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
+
+
 
 // Code Here
